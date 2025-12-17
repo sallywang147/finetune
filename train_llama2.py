@@ -149,6 +149,7 @@ def train_refinedweb(
                 position_ids=position_ids,
             )
             loss = outputs.loss / grad_accum
+            print(f"loss is {loss}\n")
 
         # record *unscaled* loss for logging
         losses.append(loss.item())
